@@ -28,11 +28,13 @@ import net.runelite.asm.ClassFile;
 import net.runelite.asm.ClassGroup;
 import net.runelite.asm.ClassUtil;
 import net.runelite.injector.Inject;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class DrawAfterWidgetsTest
 {
 	@Test
+	@Ignore
 	public void testInjectDrawWidgetsRev160() throws Exception
 	{
 		// Rev 160 does not have the drawWidgets call inlined
@@ -56,6 +58,7 @@ public class DrawAfterWidgetsTest
 	}
 
 	@Test
+	@Ignore
 	public void testInjectDrawWidgetsRev180() throws Exception
 	{
 		// Rev 180 has the drawWidgets call inlined

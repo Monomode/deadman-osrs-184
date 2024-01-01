@@ -67,7 +67,6 @@ allprojects {
 subprojects {
     apply<JavaLibraryPlugin>()
 
-
     repositories {
         mavenLocal()
 
@@ -81,8 +80,6 @@ subprojects {
             maven(url = System.getenv("NEXUS-URL"))
         }
     }
-
-
 
     tasks {
         java {

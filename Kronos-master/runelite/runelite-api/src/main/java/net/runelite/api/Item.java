@@ -32,4 +32,16 @@ public class Item
 	private final int id;
 	private final int quantity;
 	private final String[] attributes;
+
+	public Item(int id, int quantity) {
+		this.id = id;
+		this.quantity = quantity;
+		this.attributes = new String[]{};
+	}
+
+	public Item(int id, int quantity, String[] attributes) {
+		this.id = id;
+		this.quantity = quantity;
+		this.attributes = attributes;
+	}
 }
