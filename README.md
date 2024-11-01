@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-  <strong>This was released on <a href="https://www.rune-server.ee/runescape-development/rs2-server/downloads/696766-kronos-osrs-semi-custom-server-deob-client-multi-world-support-184-a.html">Rune-Server</a> by <a href="https://www.rune-server.ee/members/patrity/">Patrity</a>.</strong>
+  <strong>Released on <a href="https://www.rune-server.ee/runescape-development/rs2-server/downloads/696766-kronos-osrs-semi-custom-server-deob-client-multi-world-support-184-a.html">Rune-Server</a> by <a href="https://www.rune-server.ee/members/patrity/">Patrity</a>.</strong>
 </p>
 
 ---
