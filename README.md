@@ -1,4 +1,4 @@
-![Logo]([[https://imgur.com/a/KATElUQ](https://imgur.com/a/deadman-mode-KATElUQ)](https://imgur.com/bj2EKL4))
+![Logo](https://i.imgur.com/bj2EKL4.png)
 
 ---
 
