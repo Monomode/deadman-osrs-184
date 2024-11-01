@@ -14,4 +14,4 @@
 > Most notably is the way item attributes and upgrades work. On each item object there is also an optional list of attributes that can be added fairly easily.
 > This server contains most content up to TOB and they started a good bit of work on it before closing. The interfaces and party systems are done, combat is left.
 >
-> You can learn more about what the server has to offer from the advertisement forum thread [advertisement thread](https://www.rune-server.ee/runescape-development/rs2-server/advertise/690549-kronos-first-osrs-deob-custom-server-just-released.html)
+> You can learn more about what the server has to offer from the [advertisement forum thread.](https://www.rune-server.ee/runescape-development/rs2-server/advertise/690549-kronos-first-osrs-deob-custom-server-just-released.html)
