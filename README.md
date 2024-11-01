@@ -1,4 +1,4 @@
-![Kronos Logo](https://imgur.com/vlOi8YW.png)
+![Logo](https://imgur.com/a/KATElUQ)
 
 ---
 
