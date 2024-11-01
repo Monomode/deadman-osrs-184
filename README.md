@@ -14,6 +14,6 @@
 > 
 > ReverendDread has already released the cache editor. That can be found [HERE.](https://www.rune-server.ee/runescape-development/rs2-client/tools/695878-open-source-osrs-deob-cache-tools.html) Be sure to thank his post!
 >
-> This server contains most content up to TOB and they started a good bit of work on it before closing. The interfaces and party systems are done, only combat is left.
+> This server contains most content up to TOB and they started a good bit of work on it before closing. The interfaces and party systems are finished, only combat is left.
 >
 > You can learn more about what the server has to offer from the [advertisement forum thread.](https://www.rune-server.ee/runescape-development/rs2-server/advertise/690549-kronos-first-osrs-deob-custom-server-just-released.html)
