@@ -1,10 +1,8 @@
-![Logo](https://i.imgur.com/bj2EKL4.png)
-
----
-
 <p align="center">
   <img src="https://i.imgur.com/bj2EKL4.png" alt="Logo">
 </p>
+
+---
 
 **This was released on [Rune-Server](https://www.rune-server.ee/runescape-development/rs2-server/downloads/696766-kronos-osrs-semi-custom-server-deob-client-multi-world-support-184-a.html) by [Patrity](https://www.rune-server.ee/members/patrity/).**
 
