@@ -10,7 +10,7 @@
 
 ---
 
-> This package has been collecting dust in my github repository and I'd like to release it to the community in hopes that it may inspire some users.
+> This has been collecting dust in my github repository and I'd like to release it to the community in hopes that it may inspire some users.
 > 
 > Kronos was a semi-custom server that was hosted from May to September of 2020.
 > 
