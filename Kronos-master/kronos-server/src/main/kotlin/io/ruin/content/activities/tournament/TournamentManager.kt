@@ -87,16 +87,24 @@ object TournamentManager {
      * Attempts to start a new [Tournament] session and sets up the environment.
      */
     fun generateTournament(): Boolean {
-        if (activeTournament != null && activeTournament!!.inProgress) {
+        // Check if there is an active tournament in progress
+        if (activeTournament?.inProgress == true) {
             return false
         }
 
-        val attributes = if (activeTournament == null) {
+        // Determine the attributes for the new tournament
+        val attributes: TournamentAttributes = if (activeTournament == null) {
             TournamentPlaylist.VALUES.random().attributes
         } else {
-            TournamentPlaylist.VALUES.filter { it != activeTournament?.attributes }.random().attributes
+            val activeAttributes = activeTournament!!.attributes  // This can be null
+
+            // Safely filter out the active tournament attributes
+            TournamentPlaylist.VALUES
+                .filter { it.attributes != activeAttributes }  // activeAttributes could be null
+                .random().attributes
         }
 
+        // Create and set the new tournament
         val created = Tournament(attributes)
         activeTournament = created
         return true

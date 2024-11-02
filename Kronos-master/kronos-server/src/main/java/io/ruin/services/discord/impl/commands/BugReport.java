@@ -1,6 +1,6 @@
 package io.ruin.services.discord.impl.commands;
 
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import okhttp3.*;
 import org.json.JSONObject;
 
@@ -17,7 +17,7 @@ public class BugReport {
     private static String ACCESS_TOKEN = "p0553fff230f5645db0fa228ad5f1fddb63459a4e";
     private static String BOARD_ID = "5e5da93fb0320f0012e539e9";
 
-    public static void handle(GuildMessageReceivedEvent e) throws IOException {
+    public static void handle(MessageReceivedEvent e) throws IOException {
         //::bugreport-Title-Description
         String command[] = e.getMessage().getContentRaw().split("-");
         if (command.length != 3) {

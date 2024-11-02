@@ -13,7 +13,7 @@ import io.ruin.model.World;
 import lombok.SneakyThrows;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import java.awt.*;
 import java.sql.PreparedStatement;
@@ -21,12 +21,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
+import net.dv8tion.jda.api.utils.messages.MessageCreateData;
 
 public class AdminCommands extends ListenerAdapter {
 
     @SneakyThrows
-    @Override
-    public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
+    public void onGuildMessageReceived(MessageReceivedEvent e) {
 
         if (e.getAuthor().isBot())
             return;
@@ -55,7 +55,7 @@ public class AdminCommands extends ListenerAdapter {
                 eb.setDescription("Below is a list of pending orders. Please contact the player to complete the orders.");
                 eb.addField("ID  -  Name  -  Status  -  Amount", combinedOrders, false);
                 eb.setFooter("use ::convert [amount] to convert the donated amount to OSRS GP");
-                e.getChannel().sendMessage(eb.build()).queue();
+                e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
@@ -71,7 +71,7 @@ public class AdminCommands extends ListenerAdapter {
                 eb.setColor(new Color(0xB00D03));
                 eb.addField("Converted:", "$" + usd + " to OSRS: " + osrs + "M", false);
                 eb.setFooter("Remember to mark the order as approved once OSRS GP has been claimed with ::approve [id]");
-                e.getChannel().sendMessage(eb.build()).queue();
+                e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
             } catch (NumberFormatException ex) {
                 e.getChannel().sendMessage("Invalid number input! \n" +
                         "Ex: $25 -> `::convert 25`").queue();
@@ -86,7 +86,7 @@ public class AdminCommands extends ListenerAdapter {
                 eb.setTitle("Order Approval");
                 eb.setColor(new Color(0xB00D03));
                 eb.addField("Order #" + id + " was approved!", "Please notify this user to claim the donation now.", false);
-                e.getChannel().sendMessage(eb.build()).queue();
+                e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
 
             } catch (NumberFormatException ex) {
                 e.getChannel().sendMessage("Approval failed! \n" +
@@ -108,7 +108,7 @@ public class AdminCommands extends ListenerAdapter {
             }
             World.boostXp(amount);
             eb.addField("Bonus XP!", "The bonus XP is now set to "+amount+"x!", false);
-            e.getChannel().sendMessage(eb.build()).queue();
+            e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
 
         }
         if (message.equalsIgnoreCase("::doubledrops")) {
@@ -117,7 +117,7 @@ public class AdminCommands extends ListenerAdapter {
             eb.setTitle("Bonus XP!");
             eb.setColor(new Color(0xB00D03));
             eb.addField("Double Drops!", "Double drops are now " + (World.doubleDrops ? "**ENABLED**" : "**DISABLED**")+"!", false);
-            e.getChannel().sendMessage(eb.build()).queue();
+            e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
         }
         if (message.equalsIgnoreCase("::doublepc")) {
             World.toggleDoublePest();
@@ -125,7 +125,7 @@ public class AdminCommands extends ListenerAdapter {
             eb.setTitle("double PC Points!");
             eb.setColor(new Color(0xB00D03));
             eb.addField("Double PC Points!", "Double PC Points are now " + (World.doubleDrops ? "**ENABLED**" : "**DISABLED**")+"!", false);
-            e.getChannel().sendMessage(eb.build()).queue();
+            e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
         }
         if (message.equalsIgnoreCase("::doubleslayer")) {
             World.toggleDoubleSlayer();
@@ -133,7 +133,7 @@ public class AdminCommands extends ListenerAdapter {
             eb.setTitle("Double Slayer Points!");
             eb.setColor(new Color(0xB00D03));
             eb.addField("Double Slayer Points!", "Double Slayer Points are now " + (World.doubleDrops ? "**ENABLED**" : "**DISABLED**")+"!", false);
-            e.getChannel().sendMessage(eb.build()).queue();
+            e.getChannel().sendMessage(MessageCreateData.fromEmbeds(eb.build())).queue();
         }
 
     }

@@ -13,8 +13,9 @@ import io.ruin.model.activities.wilderness.Wilderness;
 import io.ruin.services.discord.impl.commands.BugReport;
 import lombok.SneakyThrows;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.utils.messages.MessageCreateData;
 import okhttp3.OkHttpClient;
 
 import java.awt.*;
@@ -24,8 +25,7 @@ public class UserCommands extends ListenerAdapter {
     private String[] onlineAliases = {"::online", "::players", "::info", "::server"};
 
     @SneakyThrows
-    @Override
-    public void onGuildMessageReceived(GuildMessageReceivedEvent e) {
+    public void onGuildMessageReceived(MessageReceivedEvent e) {
 
         if (e.getAuthor().isBot())
             return;
@@ -57,7 +57,7 @@ public class UserCommands extends ListenerAdapter {
                         .addField("Weekend XP:", World.weekendExpBoost ? "Enabled" : "Disabled", true)
                         .addField("Hotspot:", Hotspot.ACTIVE.name, true);
 
-                e.getChannel().sendMessage(embed.build()).queue();
+                e.getChannel().sendMessage(MessageCreateData.fromEmbeds(embed.build())).queue();
             }
         }
         if (e.getChannel().getId().equalsIgnoreCase("665271176729198604")) {
