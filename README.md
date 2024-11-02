@@ -5,7 +5,7 @@
 ---
 
 <p align="center">
-  <strong>Deadman Mode by <a href="https://www.rune-server.ee/members/monomoy/">Monomoy</a> on <a href="https://www.rune-server.ee/runescape-development/rs2-server/downloads/696766-kronos-osrs-semi-custom-server-deob-client-multi-world-support-184-a.html">Rune-Server</a></strong>.
+  <strong>Deadman Mode release by <a href="https://www.rune-server.ee/members/monomoy/">Monomoy</a> on <a href="https://www.rune-server.ee/runescape-development/rs2-server/downloads/696766-kronos-osrs-semi-custom-server-deob-client-multi-world-support-184-a.html">Rune-Server</a></strong>.
 </p>
 
 ---
